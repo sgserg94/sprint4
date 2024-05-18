@@ -7,14 +7,14 @@ import org.openqa.selenium.WebElement;
 
 public class OrderPage {
     private final WebDriver webDriver;
-    private final By nameInputLocator = By.xpath("//input[@placeholder='* Имя']");
-    private final By lastNameInputLocator = By.xpath("//input[@placeholder='* Фамилия']");
-    private final By addressInputLocator = By.xpath("//input[@placeholder='* Адрес: куда привезти заказ']");
-    private final By subwayInputLocator = By.xpath("//input[@placeholder='* Станция метро']");
-    private final By phoneInputLocator = By.xpath("//input[@placeholder='* Телефон: на него позвонит курьер']");
-    private final String stationMenuItemLocator = "//div[text()='%s']";
-    private final By nextButtonLocator = By.xpath("//button[text()='Далее']");
-    private final By YesButtonLocator = By.xpath("//button[text()='Да']");
+    private final By nameInputLocator = By.xpath("//input[@placeholder='* Имя']"); //Поле для ввода Имени
+    private final By lastNameInputLocator = By.xpath("//input[@placeholder='* Фамилия']");//Поле для ввода Фамилии
+    private final By addressInputLocator = By.xpath("//input[@placeholder='* Адрес: куда привезти заказ']"); //Поле для ввода адреса
+    private final By subwayInputLocator = By.xpath("//input[@placeholder='* Станция метро']"); //Поле выбора метро
+    private final By phoneInputLocator = By.xpath("//input[@placeholder='* Телефон: на него позвонит курьер']"); //Поле для ввода телефона
+    private final String stationMenuItemLocator = "//div[text()='%s']";  // Выбор станции метро
+    private final By nextButtonLocator = By.xpath("//button[text()='Далее']"); // Кнопка далее
+    private final By YesButtonLocator = By.xpath("//button[text()='Да']"); // Кнопка да
 
     public OrderPage(WebDriver webDriver) {
         this.webDriver = webDriver;
