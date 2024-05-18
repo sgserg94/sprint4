@@ -9,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import ru.yandex.page.MainPage;
 
 import static org.junit.Assert.assertTrue;
-
 @RunWith(Parameterized.class)
 
 public class AccordionTest {
@@ -22,8 +21,6 @@ public class AccordionTest {
         this.index = index;
         this.answer = answer;
     }
-
-
     @Parameterized.Parameters (name = "Номер вопроса {0}, Ответ {1}")
     public static Object[][] data() {
         return new Object[][] {
@@ -37,14 +34,11 @@ public class AccordionTest {
                 {7, "Да, обязательно. Всем самокатов! И Москве, и Московской области."},
         };
     }
-
     @Before
     public void setup() {
         webDriver = WebDriverFactory.getWebDriver(System.getProperty("browser", "firefox"));
-
         webDriver.get("https://qa-scooter.praktikum-services.ru/");
     }
-
     @Test
     public void accordionTest() {
         MainPage mainPage = new MainPage(webDriver);
@@ -53,7 +47,6 @@ public class AccordionTest {
         boolean answerIsDisplayed = mainPage.answerIsDisplayed(answer);
         assertTrue("Ответы на вопросы совпадают",answerIsDisplayed);
         }
-
     @After
     public void tearDown() {
         webDriver.quit();

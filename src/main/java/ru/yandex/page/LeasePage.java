@@ -16,7 +16,6 @@ public class LeasePage {
     private final By RentPeriodLocator = By.xpath("//div[text()='* Срок аренды']");
     private final By RentPeriodMenuLocator = By.xpath("//div[text()='трое суток']");
     private final By clickCreateOrderLocator = By.xpath("//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']");
-
     public LeasePage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }

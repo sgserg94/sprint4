@@ -26,23 +26,16 @@ public class OrderPage {
 
         WebElement nameInput = webDriver.findElement(nameInputLocator);
         nameInput.sendKeys(name);
-
         WebElement surnameInput = webDriver.findElement(lastNameInputLocator);
         surnameInput.sendKeys(lastName);
-
         WebElement addressInput = webDriver.findElement(addressInputLocator);
         addressInput.sendKeys(address);
-
         WebElement subwayInput = webDriver.findElement(subwayInputLocator);
         subwayInput.click();
-
         WebElement arbatskayaStationMenu = webDriver
                 .findElement(By.xpath(String.format(stationMenuItemLocator, subwayTitle)));
-
         ((JavascriptExecutor) webDriver).executeScript( "arguments[0].scrollIntoView();", arbatskayaStationMenu);
-
         arbatskayaStationMenu.click();
-
         WebElement phoneInput = webDriver.findElement(phoneInputLocator);
         phoneInput.sendKeys(phone);
     }
@@ -51,7 +44,6 @@ public class OrderPage {
 
         WebElement nextButton = webDriver
                 .findElement(nextButtonLocator);
-
         nextButton.click();
     }
 
@@ -59,7 +51,6 @@ public class OrderPage {
 
         WebElement YesButton = webDriver
                 .findElement(YesButtonLocator);
-
         YesButton.click();
 
     }

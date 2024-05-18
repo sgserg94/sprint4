@@ -40,7 +40,6 @@ public class MainPage {
 
     public void clickGoButton() {
         WebElement goButton = webDriver.findElement(GoButtonLocator);
-
         new WebDriverWait(webDriver, ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(goButton));
         goButton.click();
@@ -65,9 +64,7 @@ public class MainPage {
     public void expandQuestion(int index) {
 
        WebElement element = webDriver.findElement(By.id(String.format(questionLocator, index)));
-
         ((JavascriptExecutor) webDriver).executeScript( "arguments[0].scrollIntoView();", element);
-
         new WebDriverWait(webDriver, ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
@@ -81,13 +78,9 @@ public class MainPage {
     public void clickCreateOrderDownPage() {
 
         WebElement element = webDriver.findElement(finishButtonLocator);
-
         ((JavascriptExecutor) webDriver).executeScript( "arguments[0].scrollIntoView();", element);
-
         new WebDriverWait(webDriver, ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(element));
-
         WebElement orderCreateButtonDown = webDriver.findElement(createOrderDownButtonLocator);
-
         orderCreateButtonDown.click();
 
     }
