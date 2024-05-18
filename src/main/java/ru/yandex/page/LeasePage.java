@@ -12,11 +12,10 @@ import static java.time.Duration.ofSeconds;
 public class LeasePage {
     private final WebDriver webDriver;
 
-    private final By selectDateLocator = By.xpath("//input[@placeholder='* Когда привезти самокат']");
-    private final By RentPeriodLocator = By.xpath("//div[text()='* Срок аренды']");
-    private final By RentPeriodMenuLocator = By.xpath("//div[text()='трое суток']");
-    private final By clickCreateOrderLocator = By.xpath("//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']");
-
+    private final By selectDateLocator = By.xpath("//input[@placeholder='* Когда привезти самокат']"); //Выбор даты заказа
+    private final By RentPeriodLocator = By.xpath("//div[text()='* Срок аренды']"); //Поле срока аренды
+    private final By RentPeriodMenuLocator = By.xpath("//div[text()='трое суток']"); // выбор срока аренды
+    private final By clickCreateOrderLocator = By.xpath("//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']"); //Кнопка заказать
     public LeasePage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
